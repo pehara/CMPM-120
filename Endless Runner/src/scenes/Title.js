@@ -3,11 +3,11 @@ class Title extends Phaser.Scene {
         super("titleScene");
     }
 
-    preload() {
-        // Load menu sounds
-        this.load.audio('bgmusic', './assets/bgmusic.wav');
-        this.load.image('bgmenu', './assets/bgmenu.png');
-    }
+    // preload() {
+    //     // Load menu sounds
+    //     this.load.audio('bgmusic', './assets/bgmusic.wav');
+    //     this.load.image('bgmenu', './assets/bgmenu.png');
+    // }
 
     create() {
         // Menu config

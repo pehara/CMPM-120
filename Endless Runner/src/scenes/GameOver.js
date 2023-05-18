@@ -9,6 +9,17 @@ class GameOver extends Phaser.Scene {
         
         const { score } = data; // Get the score from the data object
 
+        // Set up the audio
+        this.sadMusic = this.sound.add('sadmusic', {
+            mute: false,
+            volume: 1,
+            rate: 1,
+            loop: true
+        });
+
+        // Play sad music
+        this.sadMusic.play();
+
         // Display the score on the game over screen
         this.add.text(
             this.sys.game.config.width / 2,
@@ -27,9 +38,14 @@ class GameOver extends Phaser.Scene {
     update() {
         // check for UP input
         if (Phaser.Input.Keyboard.JustDown(this.cursors.up)) {
-            // start next scene
-            //console.log("check");
+            // Play the resetsound
+            this.sound.play('restartsound');
+            this.sadMusic.stop();
+        
+            // Start next scene
+            //this.scene.start('restartsound');
             this.scene.start('titleScene');
         }
     }
+      
 }

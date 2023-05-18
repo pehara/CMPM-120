@@ -8,11 +8,14 @@ class Load extends Phaser.Scene {
 		this.load.audio('bgmusic', './assets/bgmusic.wav');
         this.load.audio('meow', './assets/meow.wav');
         this.load.audio('jump', './assets/jump.wav');
+        this.load.audio('restartsound', './assets/restartsound.wav');
+        this.load.audio('sadmusic', './assets/sadmusic.wav');
 
         // Load images
 		this.load.image('bgmenu', './assets/bgmenu.png');
         this.load.image('sky', './assets/sky.png');
         this.load.image('clouds', './assets/clouds.png');
+        
         //this.load.image('player', './assets/player.png');
         this.load.image('ground', './assets/ground.png');
         this.load.image('sunlight', './assets/sunlight.png');
