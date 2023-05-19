@@ -2,9 +2,14 @@
 
 Pehara Vidanagamachchi
 cat run
-20-30 Hours
-Creative tilt: ?/10
+30 Hours
+Creative tilt: 7/10
 
+In my game cat run I implemented a jump mechanic that lets you jump in the air, I avoid checking if the player is on the ground
+before the next jump which allows them to use the jump as much as they want, I also included sky enemies so they would not
+just avoid all the ground enemies by staying up high. I am really proud of my visuals and all the art I made for it,
+because it has a very cozy and warm vibe which is what I was going for. I did also make an animated sprite for the player
+but I struggled to implement it.
 
 ****************************************************/
 

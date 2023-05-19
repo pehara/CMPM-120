@@ -27,7 +27,7 @@ class Load extends Phaser.Scene {
         this.load.image('player', './assets/player.png');
        
         // Load animations
-        //this.load.spritesheet("player", "player.png", { frameWidth: 57, frameHeight: 87 });
+        //this.load.spritesheet("spriteSheet", "spriteSheet.png", { frameWidth: 57, frameHeight: 87 });
         //this.load.spritesheet('player', './assets/player.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
 	}
 
