@@ -7,7 +7,7 @@ class GameOver extends Phaser.Scene {
         // Load game over image
         this.gameover = this.add.tileSprite(0, 0, 960, 640, 'gameover').setOrigin(0, 0);
     
-        const { score, highScore } = data; // Get the score and high score from the data object
+        const { score } = data; // Get the score and high score from the data object
     
         // Display the high score on the screen
         // this.add.text(500, 50, `High Score: ${highScore}`, {

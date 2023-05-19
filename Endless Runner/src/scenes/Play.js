@@ -108,7 +108,8 @@ class Play extends Phaser.Scene {
 			callbackScope: this,
 			loop: true,
 		});
-
+		
+		// Remove hs
 		// // Retrieve the high score from local storage
 		// const storedHighScore = localStorage.getItem('highScore');
 		// if (storedHighScore) {
