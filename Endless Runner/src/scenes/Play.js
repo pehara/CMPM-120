@@ -7,7 +7,7 @@ class Play extends Phaser.Scene {
 	constructor() {
 	super('playScene');
 	this.score = 0; // Initialize the score variable
-	this.highScore = 0; // Initialize the high score variable
+	//this.highScore = 0; // Initialize the high score variable
 	}
 
 	create() {
@@ -109,11 +109,11 @@ class Play extends Phaser.Scene {
 			loop: true,
 		});
 
-		// Retrieve the high score from local storage
-		const storedHighScore = localStorage.getItem('highScore');
-		if (storedHighScore) {
-			this.highScore = parseInt(storedHighScore); // Parse the stored value to an integer
-		}
+		// // Retrieve the high score from local storage
+		// const storedHighScore = localStorage.getItem('highScore');
+		// if (storedHighScore) {
+		// 	this.highScore = parseInt(storedHighScore); // Parse the stored value to an integer
+		// }
 	}
   
 	spawnObstacle() {
@@ -189,17 +189,17 @@ class Play extends Phaser.Scene {
 		this.trees.tilePositionX += 0.5 * this.gameSpeed;
 	}
   
-	updateHighScore() {
-		if (this.score > this.highScore) {
-			this.highScore = this.score;
+	// updateHighScore() {
+	// 	if (this.score > this.highScore) {
+	// 		this.highScore = this.score;
 	
-			// Store the new high score in local storage
-			localStorage.setItem('highScore', this.highScore);
+	// 		// Store the new high score in local storage
+	// 		localStorage.setItem('highScore', this.highScore);
 	
-			// Update the high score text
-			this.highScoreText.setText(`High Score: ${this.highScore}`);
-		}
-	}
+	// 		// Update the high score text
+	// 		this.highScoreText.setText(`High Score: ${this.highScore}`);
+	// 	}
+	// }
   
 	update() {
 		// Scroll the background, cloudsback, and trees
@@ -227,8 +227,8 @@ class Play extends Phaser.Scene {
 		// Stop the game and display the game over screen
 		this.physics.pause();
 		this.bgm.stop();
-		this.updateHighScore();
-		this.scene.start('gameOverScene', { score: this.score, highScore: this.highScore });
+		//this.updateHighScore();
+		this.scene.start('gameOverScene', { score: this.score});
 	}
   
 	handleCollision() {
