@@ -31,7 +31,7 @@ class LoadScene extends Phaser.Scene {
         this.load.image('restartbutton', './assets/restartbutton.png');
     
         // Load for the Bomb Scene
-        this.load.image('tiles', './assets/scene1assets.png');
+        this.load.image('tiles', './assets/scene1Assets.png');
         this.load.tilemapTiledJSON('map', './assets/Scene1AssetsTileMap.json');
         this.load.image('bombexit', './assets/bombexit.png');
 
@@ -46,8 +46,8 @@ class LoadScene extends Phaser.Scene {
         });
 
         // Load for cutscene 2
-		this.load.image('continueButton', './assets/continueButton.png');
-		this.load.image('nextButton', './assets/nextButton.png');
+		this.load.image('continueButton', './assets/continuebutton.png');
+		this.load.image('nextButton', './assets/nextbutton.png');
 
 		// Load for cutscene
 		this.load.image('image4', './assets/image4.png');
@@ -55,7 +55,7 @@ class LoadScene extends Phaser.Scene {
 		this.load.image('image6', './assets/image6.png'); 
 
         // Gather scene preload
-		this.load.image('tiles', './assets/scene1assets.png');
+		this.load.image('tiles', './assets/scene1Assets.png');
 		this.load.tilemapTiledJSON('map', './assets/Scene1AssetsTileMap.json');
 		
 		this.load.image('food', './assets/tempfood.png');
