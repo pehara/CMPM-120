@@ -19,8 +19,8 @@ class LoadScene extends Phaser.Scene {
         this.load.image('startbutton', './assets/startbutton.png');
 
         // Load for first cutscene
-        this.load.image('continueButton', './assets/continueButton.png');
-        this.load.image('nextButton', './assets/nextButton.png');
+        this.load.image('continueButton', './assets/continuebutton.png');
+        this.load.image('nextButton', './assets/nextbutton.png');
 
         this.load.image('image1', './assets/image1.png');
 		this.load.image('image2', './assets/image2.png');
