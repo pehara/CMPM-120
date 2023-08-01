@@ -177,6 +177,8 @@ class GatherScene extends Phaser.Scene {
 		
 		// Add collision between player and farmer
 		this.physics.add.collider(this.player, this.farmer, this.handlePlayerFarmerCollision, null, this);
+		this.physics.add.collider(this.player, this.farmer2, this.handlePlayerFarmerCollision, null, this);
+
 	
 		// Setup cursor keys
 		this.cursors = this.input.keyboard.createCursorKeys();
@@ -242,6 +244,9 @@ class GatherScene extends Phaser.Scene {
 			fill: '#ffffff',
 			backgroundColor: '#000000'
 		}).setScrollFactor(0);
+
+		// Disable debug rendering for the physics system
+        this.physics.world.debugGraphic.setVisible(false);
 
 	}
   
@@ -318,20 +323,20 @@ class GatherScene extends Phaser.Scene {
 		this.zone5left2.visible = false;
 		this.zone8down2.visible = false;
 
-		// Set visibility for the zones the farmers face
-		if (this.farmer.anims.currentAnim.key === 'left') {
-			this.zone1left.visible = true;
-			this.zone5left2.visible = true;
-		} else if (this.farmer.anims.currentAnim.key === 'down') {
-			this.zone2down.visible = true;
-			this.zone8down2.visible = true;
-		} else if (this.farmer.anims.currentAnim.key === 'right') {
-			this.zone3right2.visible = true;
-			this.zone6right.visible = true;
-		} else if (this.farmer.anims.currentAnim.key === 'up') {
-			this.zone4up2.visible = true;
-			this.zone7up.visible = true;
-		}
+		// // Set visibility for the zones the farmers face
+		// if (this.farmer.anims.currentAnim.key === 'left') {
+		// 	this.zone1left.visible = true;
+		// 	this.zone5left2.visible = true;
+		// } else if (this.farmer.anims.currentAnim.key === 'down') {
+		// 	this.zone2down.visible = true;
+		// 	this.zone8down2.visible = true;
+		// } else if (this.farmer.anims.currentAnim.key === 'right') {
+		// 	this.zone3right2.visible = true;
+		// 	this.zone6right.visible = true;
+		// } else if (this.farmer.anims.currentAnim.key === 'up') {
+		// 	this.zone4up2.visible = true;
+		// 	this.zone7up.visible = true;
+		// }
 
 		// Check if the player is detected by any zone and trigger game over scene
 		if (playerInLineOfSight1 || playerInLineOfSight2 || playerInLineOfSight6 || playerInLineOfSight7) {

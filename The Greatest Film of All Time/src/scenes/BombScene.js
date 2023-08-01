@@ -101,6 +101,10 @@ class BombScene extends Phaser.Scene {
 
         // Set up collision between player and fires
         this.physics.add.overlap(this.player, this.firesGroup, this.handleFireCollision, null, this);
+
+        // Disable debug rendering for the physics system
+        this.physics.world.debugGraphic.setVisible(false);
+
     }
     
     update() {

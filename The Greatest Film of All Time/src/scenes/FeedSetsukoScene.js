@@ -119,6 +119,10 @@ class FeedSetsukoScene extends Phaser.Scene {
             fill: '#ff0000',
             fontStyle: 'bold',
         }).setOrigin(0.5);
+
+        // Disable debug rendering for the physics system
+        this.physics.world.debugGraphic.setVisible(false);
+
     }
 
     update() {
